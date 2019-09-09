@@ -119,6 +119,9 @@ module Skylight::Core
       end
 
       def activate?(_sk_config)
+        #RRS
+        return true
+        #RRS
         key = "#{self.class.config_class.env_prefix}ENABLED"
         if ENV.key?(key)
           ENV[key] !~ /^false$/i
